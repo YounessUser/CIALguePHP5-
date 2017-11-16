@@ -64,7 +64,8 @@ $subject = find_subject_by_id($id);
     <!--</div>-->
 </div>
 <!-- copyright -->
-
+<script type="text/javascript" src="<?php echo url_for('stylesheets/js/jquery-2.1.4.min.js');?>"></script>
+        <script type="text/javascript" src="<?php echo url_for('stylesheets/js/bootstrap.js');?>"></script>
 </body>
 
 </html>
