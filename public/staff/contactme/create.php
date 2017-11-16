@@ -3,25 +3,7 @@
 require_once('../../../private/initialize.php');
 
 if (is_post_request()) {
-    /************** reCaptcha ***************/
-    // your secret key
-$secret = "6LcJjDgUAAAAACe24fvSxB4l9wemWB7L-Qj-EoIt";
- 
-// empty response
-$response = null;
- 
-// check secret key
-$reCaptcha = new ReCaptcha($secret);
-
-// if submitted check response
-if ($_POST["g-recaptcha-response"]) {
-    $response = $reCaptcha->verifyResponse(
-        $_SERVER["REMOTE_ADDR"],
-        $_POST["g-recaptcha-response"]
-    );
-}
-
-if ($response != null && $response->success){
+    if(is_true_capatcha()){
 
     // Handle form values sent by new.php
 
