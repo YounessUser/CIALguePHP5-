@@ -12,9 +12,8 @@
             <table class="table table-striped table-bordered" style="table-layout: fixed">
                 <thead>
                     <tr>
-                        <?php foreach ($calendrier_contenu as $contenu): ?>
-                            <?php  $date= new DateTime($contenu['dateCalendar']);?>
-                            <td class="columWidth"><b><?php= $date->format('d-m-Y'); ?></b></td>
+                        <?php foreach ($calendrier_dates as $contenu): ?>
+                            <td class="columWidth"><b><?= $contenu ?></b></td>
                         <?php endforeach; ?>
                     </tr>
                 </thead>

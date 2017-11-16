@@ -99,5 +99,18 @@ $errors = array();
         </div>
     </div>
 </div>
-<?php include(SHARED_PATH . './Footer.php'); ?>
-<?php include(SHARED_PATH . '/staff_footer.php'); ?>
+<!-- copyright -->
+<div class="footer-w3layouts">
+    <!--<div class="container">-->
+    <div class="agile-copy">
+        <p>© 2017 Travel Adventure. All rights reserved | Design by <a href="http://w3layouts.com/">W3layouts</a></p>
+    </div>
+
+    <div class="clearfix"></div>
+    <!--</div>-->
+</div>
+<!-- copyright -->
+
+</body>
+
+</html>

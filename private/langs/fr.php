@@ -25,11 +25,15 @@ $themes_contenu = find_theme_by_lang('Fr');
 $calendrier_title = "Calendrier";
 $res=find_calendar_by_langue('Fr');
 $array = array();
+$array_date = array();
 $i = 0;
 while ($contenu = mysqli_fetch_assoc($res)) {
+    $date= new DateTime($contenu['dateCalendar']);
     $array[$i++] = $contenu;
+    $array_date[$i++]=$date->format('d-m-Y');
 }
 $calendrier_contenu = $array;
+$calendrier_dates = $array_date;
 
 //Programme page
 
