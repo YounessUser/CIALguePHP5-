@@ -73,18 +73,18 @@ function display()
         <div style="width: 300px;height: 50px;">
             <img src="image<?php echo $_SESSION['count'] ?>.png">
         </div>
-        <form action=" <?php echo $_SERVER['PHP_SELF']; ?>" method="POST" style="display: inline;">
+        <!--<form action=" <?php // echo $_SERVER['PHP_SELF']; ?>" method="POST" style="display: inline;">-->
             <input type="text" name="input" style="width: 300px;"/>
             <input type="hidden" name="flag" value="1"/>
             <!--<input type="submit" value="" name="submit"/>-->
-          <button type="submit" value="" name="submit" style="width: 50px;padding: 10px;"><i class="fa fa-save"></i></button>
+          <!--<button type="submit" value="" name="submit" style="width: 50px;padding: 10px;"><i class="fa fa-save"></i></button>-->
             
-        </form>
+        <!--</form>-->
 
-        <form action=" <?php echo $_SERVER['PHP_SELF']; ?>" method="POST" style="display: inline;border: none;">
+        <!--<form action=" <?php // echo $_SERVER['PHP_SELF']; ?>" method="POST" style="display: inline;border: none;">-->
             <!--<input type="submit"  value="">-->
-            <button type="submit" value="Submit" style="width: 50px;padding: 10px;"><i class="fa fa-refresh"></i></button>
-        </form>
+            <!--<button type="submit" value="Submit" style="width: 50px;padding: 10px;"><i class="fa fa-refresh"></i></button>-->
+        <!--</form>-->
     </div>
 
 <?php

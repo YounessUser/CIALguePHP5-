@@ -97,29 +97,7 @@ and open the template in the editor.
                     <label><b>Password</b></label>
                     <input type="password" placeholder="Enter Password" name="password"  required>
 
-
-<div class="g-recaptcha" data-sitekey="6LcJjDgUAAAAAKF5QQbpz2E-nIuWa98tTv0i92mC"></div>
-                <noscript>
-  <div>
-    <div style="width: 302px; height: 422px; position: relative;">
-      <div style="width: 302px; height: 422px; position: absolute;">
-        <iframe src="https://www.google.com/recaptcha/api/fallback?k=6LcJjDgUAAAAAKF5QQbpz2E-nIuWa98tTv0i92mC"
-                frameborder="0" scrolling="no"
-                style="width: 302px; height:422px; border-style: none;">
-        </iframe>
-      </div>
-    </div>
-    <div style="width: 300px; height: 60px; border-style: none;
-                   bottom: 12px; left: 25px; margin: 0px; padding: 0px; right: 25px;
-                   background: #f9f9f9; border: 1px solid #c1c1c1; border-radius: 3px;">
-      <textarea id="g-recaptcha-response" name="g-recaptcha-response"
-                   class="g-recaptcha-response"
-                   style="width: 250px; height: 40px; border: 1px solid #c1c1c1;
-                          margin: 10px 25px; padding: 0px; resize: none;" >
-      </textarea>
-    </div>
-  </div>
-</noscript>
+                   <?php include(SHARED_PATH . '/capatcha.php'); ?>
                     <!--Valider la Connection-->
                     <button type="submit">Login</button>
                 </div>

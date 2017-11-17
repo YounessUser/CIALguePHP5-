@@ -44,9 +44,9 @@
                         </div>-->
                     </div>
                     <div class="col-md-8 contact-form-right">
-                        <div class="contact-form-top">
+<!--                        <div class="contact-form-top">
                             <h3><?=$contact_contenu[1];?></h3>
-                        </div>
+                        </div>-->
                         <div class="agileinfo-contact-form-grid">
                             <form action="<?php echo url_for('/staff/contactme/create.php'); ?>" method="post">
                                 <input type="text" name="name" placeholder="<?=$contact_contenu[2];?>" required="">
