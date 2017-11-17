@@ -6,8 +6,6 @@
  * and open the template in the editor.
  */
 
-
-
 function url_for($script_path) {
     // add the leading '/' if not present
     if ($script_path[0] != '/') {
@@ -88,17 +86,17 @@ function sendEmail($sendmail) {
     try {
 
         $mail = new PHPMailer(); // create a new object
-        $mail->IsSMTP();// enable SMTP
+        $mail->IsSMTP(); // enable SMTP
         $mail->CharSet = 'UTF-8';
         $mail->SMTPDebug = 3; // debugging: 1 = errors and messages, 2 = messages only
         $mail->SMTPAuth = true; // authentication enabled
         $mail->SMTPSecure = 'tls'; // secure transfer enabled REQUIRED for Gmail
         $mail->SMTPOptions = array(
-        'ssl' => array(
-        'verify_peer' => false,
-        'verify_peer_name' => false,
-        'allow_self_signed' => true
-            ));
+            'ssl' => array(
+                'verify_peer' => false,
+                'verify_peer_name' => false,
+                'allow_self_signed' => true
+        ));
         $mail->Host = "smtp.gmail.com";
         $mail->Port = 587; // or 587 465
         $mail->Username = E_MAIL;
@@ -116,47 +114,44 @@ function sendEmail($sendmail) {
         //$mail->addCC('melato@tinoza.org');
         //Content
         $mail->isHTML(true);                                  // Set email format to HTML
-        $mail->Subject = 'Reply to' .' '. $sendmail['nom'];
+        $mail->Subject = 'Reply to' . ' ' . $sendmail['nom'];
         //$mail->Subject = 'Reply to';
         $mail->Body = $sendmail['reply'];
         //$mail->Body = "Test Test Test";
-        
-       
-      if (!$mail->send()){
-          echo 'Mailer Error: ' . $mail->ErrorInfo;
-      }
- 
- 
+
+
+        if (!$mail->send()) {
+            echo 'Mailer Error: ' . $mail->ErrorInfo;
+        }
     } catch (Exception $e) {
 
         echo "Mail Not Sent" . $mail->ErrorInfo;
     }
-    
-    function is_true_capatcha(){
-    /************** reCaptcha ***************/
+}
+
+function is_true_capatcha() {
+    /*     * ************ reCaptcha ************** */
     // your secret key
-$secret = "6LcJjDgUAAAAACe24fvSxB4l9wemWB7L-Qj-EoIt";
- 
+    $secret = "6LcJjDgUAAAAACe24fvSxB4l9wemWB7L-Qj-EoIt";
+
 // empty response
-$response = null;
- 
+    $response = null;
+
 // check secret key
-$reCaptcha = new ReCaptcha($secret);
+    $reCaptcha = new ReCaptcha($secret);
 
 // if submitted check response
-if ($_POST["g-recaptcha-response"]) {
-    $response = $reCaptcha->verifyResponse(
-        $_SERVER["REMOTE_ADDR"],
-        $_POST["g-recaptcha-response"]
-    );
-}
+    if ($_POST["g-recaptcha-response"]) {
+        $response = $reCaptcha->verifyResponse(
+                $_SERVER["REMOTE_ADDR"], $_POST["g-recaptcha-response"]
+        );
+    }
 
-if ($response != null && $response->success){
-    return true;
-}else{
-    return false;
-}
-}
+    if ($response != null && $response->success) {
+        return true;
+    } else {
+        return false;
+    }
 }
 
 ?>
