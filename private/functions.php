@@ -144,6 +144,7 @@ function is_true_capatcha() {
     if ($_POST["g-recaptcha-response"]) {
         $response = $reCaptcha->verifyResponse(
                 $_SERVER["REMOTE_ADDR"], $_POST["g-recaptcha-response"]
+          
         );
     }
 
