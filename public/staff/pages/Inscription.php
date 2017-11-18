@@ -1,32 +1,36 @@
 <?php require_once('../../../private/initialize.php'); ?> 
 
 
-<?php include(SHARED_PATH . '/Header.php');
-$errors = array();
+<?php
+include(SHARED_PATH . '/Header.php');
 ?>
 
 <div class="section">
     <div class="pageContent">
 
 
-        <h1 class="presentationTitle"><b><?= $inscription_title;?></b></h1>
-        <!--<a class="back-link" href="<?php // echo url_for('/staff/commite/index.php'); ?>">&laquo; Revenir vers la list</a>-->
-        <h1></h1>
+        <h1 class="presentationTitle"><b><?= $inscription_title; ?></b></h1>
+        <!--<a class="back-link" href="<?php // echo url_for('/staff/commite/index.php');    ?>">&laquo; Revenir vers la list</a>-->
+
         <div style="padding-top: 2%;">
-            <?php echo display_errors($errors); ?>
+
+            <?php
+            $err = (isset($_SESSION['errors'])) ? $_SESSION['errors'] : '';
+            echo $err;
+            ?>
+
             <form action="<?php echo url_for('/staff/inscription/create.php'); ?>" method="post" style="width: 100%;">
 
-                
-                 <!--Saisir le nom -->
-                <label class="labelClass" for="nom"><?= $inscription_contenu[0];?></label>
-                <input id="nom" type="text" maxlength="20" placeholder="<?= $inscription_contenu[0];?>" name="lastname" required>
+                <!--Saisir le nom -->
+                <label class="labelClass" for="nom"><?= $inscription_contenu[0]; ?></label>
+                <input id="nom" type="text" maxlength="20" placeholder="<?= $inscription_contenu[0]; ?>" name="lastname" required>
                 <!--Saisir le Prenom -->
-                <label class="labelClass" for="prenom"><?= $inscription_contenu[1];?></label>
-                <input id="prenom" type="text" maxlength="20" placeholder="<?= $inscription_contenu[1];?>" name="firstname" required>
+                <label class="labelClass" for="prenom"><?= $inscription_contenu[1]; ?></label>
+                <input id="prenom" type="text" maxlength="20" placeholder="<?= $inscription_contenu[1]; ?>" name="firstname" required>
 
 
                 <div style="padding:8px 0;">
-                    <label class="labelClass" for="commu"><?= $inscription_contenu[2];?></label>
+                    <label class="labelClass" for="commu"><?= $inscription_contenu[2]; ?></label>
                     <select id="commu" class="form-control selectForm" name="commu" required>
                         <option value="" selected="">Communication</option> 
                         <option value="Orale" >Orale</option> 
@@ -37,7 +41,7 @@ $errors = array();
 
                 <!--Saisir l theme -->
                 <div style="padding:8px 0;">
-                    <label class="labelClass" for="theme"><?= $inscription_contenu[3];?></label>
+                    <label class="labelClass" for="theme"><?= $inscription_contenu[3]; ?></label>
                     <select id="theme" class="form-control selectForm" name="theme" required>
                         <option value="" selected="">Thème</option> 
                         <option value="1" >Algues et biodiversité</option> 
@@ -51,26 +55,26 @@ $errors = array();
                 </div>
 
                 <!--Saisir l titre -->
-                <label class="labelClass" for="titre"><?= $inscription_contenu[4];?> :</label>
-                <input id="titre" type="text"  placeholder="<?= $inscription_contenu[4];?>" name="titre" required>
+                <label class="labelClass" for="titre"><?= $inscription_contenu[4]; ?> :</label>
+                <input id="titre" type="text"  placeholder="<?= $inscription_contenu[4]; ?>" name="titre" required>
 
                 <!--Saisir l address -->
-                <label class="labelClass" for="adresse"><?= $inscription_contenu[5];?> :</label>
-                <input id="adresse" type="text" maxlength="2000" placeholder="<?= $inscription_contenu[5];?>" name="address" required>
+                <label class="labelClass" for="adresse"><?= $inscription_contenu[5]; ?> :</label>
+                <input id="adresse" type="text" maxlength="2000" placeholder="<?= $inscription_contenu[5]; ?>" name="address" required>
 
                 <!--Saisir le Email--> 
-                 <label class="labelClass" for="email"><?= $inscription_contenu[6];?> :</label>
-                 <input id="email" type="text" maxlength="150" placeholder="<?= $inscription_contenu[6];?>" name="email" required>
+                <label class="labelClass" for="email"><?= $inscription_contenu[6]; ?> :</label>
+                <input id="email" type="text" maxlength="150" placeholder="<?= $inscription_contenu[6]; ?>" name="email" required>
 
 
                 <div style="padding: 8px 0;">
-                    <label class="labelClass" for="country"><?= $inscription_contenu[7];?> :</label>
+                    <label class="labelClass" for="country"><?= $inscription_contenu[7]; ?> :</label>
                     <?php include(UTIL_PATH . "/countries.php"); ?>
                 </div>
 
 
                 <div style="padding: 8px 0;">
-                    <label class="labelClass" for="gender"><?= $inscription_contenu[8];?> :</label>
+                    <label class="labelClass" for="gender"><?= $inscription_contenu[8]; ?> :</label>
                     <select id="gender" class="form-control selectForm" name="gender" required>
                         <option value="" selected="">Sexe</option> 
                         <option value="1">Male</option> 
@@ -80,7 +84,7 @@ $errors = array();
                 </div>
 
                 <div style="padding: 8px 0;">
-                    <label class="labelClass" for="typePersoone"><?= $inscription_contenu[9];?> :</label>
+                    <label class="labelClass" for="typePersoone"><?= $inscription_contenu[9]; ?> :</label>
                     <select id="typePersoone" class="form-control" name="type" required>
                         <option value="" selected="">Fonction</option> 
                         <option value="2" >Enseignant-chercheur</option> 
@@ -91,10 +95,10 @@ $errors = array();
                 <br/>
 
 
-            <?php include(SHARED_PATH . '/capatcha.php'); ?>
+                <?php include(SHARED_PATH . '/capatcha.php'); ?>
 
                 <!--valider l'enregistrement-->
-                <button type="submit"><?=$inscription_contenu[10];?></button>
+                <button type="submit"><?= $inscription_contenu[10]; ?></button>
             </form>
         </div>
     </div>
@@ -110,8 +114,8 @@ $errors = array();
     <!--</div>-->
 </div>
 <!-- copyright -->
-<script type="text/javascript" src="<?php echo url_for('stylesheets/js/jquery-2.1.4.min.js');?>"></script>
-        <script type="text/javascript" src="<?php echo url_for('stylesheets/js/bootstrap.js');?>"></script>
+<script type="text/javascript" src="<?php echo url_for('stylesheets/js/jquery-2.1.4.min.js'); ?>"></script>
+<script type="text/javascript" src="<?php echo url_for('stylesheets/js/bootstrap.js'); ?>"></script>
 </body>
 
 </html>

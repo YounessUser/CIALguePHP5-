@@ -55,7 +55,9 @@
                                 <textarea name="message" placeholder="<?=$contact_contenu[5];?>" required=""></textarea>
                                 
                                 <?php include(SHARED_PATH . '/capatcha.php'); ?>
-                                <button class="btn1">Submit</button>
+                                <br>
+                                <br>
+                                <button style="display: block" class="btn1">Submit</button>
                             </form>
                         </div>
                     </div>
