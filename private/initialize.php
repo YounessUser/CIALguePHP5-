@@ -45,7 +45,6 @@ define("WWW_ROOT", $doc_root);
 
 require_once('database.php');
 require_once('auth_functions.php');
-require_once('recapatcha.php');
 require_once('validation_functions.php');
 require_once('services/article_services.php');
 require_once('services/commite_services.php');
