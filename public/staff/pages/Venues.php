@@ -32,8 +32,8 @@ $subject = find_subject_by_id($id);
                   <div class="card" >
                       <img class="card-img-top" src="../../stylesheets/img/Jardins_de_la_Ménara.jpg" alt="Card image cap">
                     <div class="card-block">
-                        <h4 class="card-title">Menara</h4>
-                        <p class="card-text">Menara gardens pavillion, Marrakech, Morocco.</p>
+                        <h4 class="card-title">Menara gardens pavillion</h4>
+                        <p class="card-text">The Menara gardens (Arabic: حدائق المنارة‎‎) are botanical gardens located to the west of Marrakech, Morocco, near the Atlas Mountains. They were established in the 12th century (c. 1130) by the Almohad Caliphate ruler Abd al-Mu'min.</p>
                         <a href="https://commons.wikimedia.org/wiki/File:Jardins_de_la_M%C3%A9nara.jpg?uselang=en" class="btn btn-primary">See More</a>
                     </div>
                 </div>
@@ -42,8 +42,8 @@ $subject = find_subject_by_id($id);
                   <div class="card" >
                       <img class="card-img-top" src="../../stylesheets/img/Djemaa_el_Fna.jpg" alt="Card image cap">
                     <div class="card-block">
-                        <h4 class="card-title">Djemaa el Fna</h4>
-                        <p class="card-text">Djemaa el Fna (La Place) in Marrakech. October 2013.</p>
+                        <h4 class="card-title">Jemaa el-Fna</h4>
+                        <p class="card-text">La place Jemaa el-Fna (en arabe : جامع الفنا, « place des trépassés ») est une célèbre place publique au sud-ouest de la médina de Marrakech au Maroc. Ce haut-lieu traditionnel, populaire et animé notamment la nuit attire plus d'un million de visiteurs chaque année.</p>
                         <a href="https://commons.wikimedia.org/wiki/File:Djemaa_el_Fna.jpg?uselang=en" class="btn btn-primary">See More</a>
                     </div>
                 </div>
