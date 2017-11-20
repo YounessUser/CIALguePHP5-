@@ -2107,6 +2107,15 @@ button.close {
 
         margin: 1.5em 12px 1em 12px;
     }
+      .hr-template{
+        display: none;
+    }
+    .logoLeft{
+        display: none;
+    }
+    .lg-sc{
+        width: 100%!important;
+    }
 }
 
 @media screen and (max-width: 991px) {
@@ -2220,6 +2229,9 @@ button.close {
     div#testimonials {
         height: 336px;
     }
+    .logoBrand{
+        display: none;
+    }
 }
 
 @media screen and (max-width: 800px) {
@@ -2239,6 +2251,12 @@ button.close {
     }
     .subscribe-grid {
         width: 100%;
+    }
+    .hr-template{
+        display: none;
+    }
+    .logoLeft{
+        display: none;
     }
 }
 
@@ -2336,7 +2354,7 @@ button.close {
         padding: 1em!important;
         margin: 12px 0!important;
     }
-
+   
 }
 
 @media screen and (max-width: 667px) {

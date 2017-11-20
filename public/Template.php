@@ -23,10 +23,10 @@
 
                     </p>
                 </div>
-                <div class="col-sm-1">
+                <div class="col-sm-1 ">
                     <hr class="hr-template" >
                 </div>
-                <div class="logos col-sm-3">
+                <div class="logos col-sm-3 ">
                     <img src="stylesheets/img/newLogoFSTG.png" class=" logoLeft" alt="FSTG"   >
                     <!--<img src="stylesheets/img/UCALogo.png" class="sponsseurLogo logoRight" alt="UCA" >-->
                 </div> 
