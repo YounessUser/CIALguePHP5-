@@ -80,7 +80,7 @@ if (is_post_request()) {
             //$errors[]='Fill in the Blank Again with correct answers form!';
         }
     } else {
-         $errors[] = "Confirmer que vous n'etes pas un robot !! ";
+         $errors[] = "Si vous n allez pas rediriger directement vers un message de succes apres clicker Valider, donc votre inscription n'est pas enregistrer, veuillez verifier que vous avez bien saisir le code Captcha";
          $_SESSION['errors']=display_errors($errors);
         redirect_to(url_for('/staff/pages/Inscription.php'));
     }

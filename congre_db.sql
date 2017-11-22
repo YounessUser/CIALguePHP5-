@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 16, 2017 at 02:09 PM
+-- Generation Time: Nov 20, 2017 at 03:46 PM
 -- Server version: 10.1.24-MariaDB
 -- PHP Version: 7.1.6
 
@@ -32,7 +32,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `accueil` (
   `id` int(11) NOT NULL,
   `type` varchar(255) DEFAULT NULL,
-  `text` mediumtext,
+  `text` mediumtext CHARACTER SET utf8 COLLATE utf8_bin,
   `langue` varchar(25) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -41,10 +41,10 @@ CREATE TABLE `accueil` (
 --
 
 INSERT INTO `accueil` (`id`, `type`, `text`, `langue`) VALUES
-(1, 'titre_accueil', '2éme CONGRES INTERNATIONAL SUR LES ALGUES ', 'Fr'),
+(1, 'titre_accueil', '2<sup>eme</sup> CONGRES INTERNATIONAL SUR LES ALGUES ', 'Fr'),
 (2, 'dateLimite_accueil', 'Du 22 au 24 Mars 2018, Marrakech, Maroc', 'Fr'),
-(3, 'presentation', '<p>La réussite du CIAlgues en 2016 a laissé un impact très remarquable au sein de tous les participants.<br /> La deuxième édition CIAlgue-2018 sera une continuité de cette activité internationale axant sur l\'intérêt évolutif de différents domaines impliquant les algues. Ces thallophytes continuent à ouvrir de nombreuses perspectives pour la recherche scientifiques et pour de nombreux secteurs économiques. </p>\r\n                    <br>\r\n                    <p>Leurs importances alimentaires, sanitaires, cosmétiques, industrielles et énergétiques fait de ces végétaux inférieurs un matériel à exploiter par diverses méthodes et ouvrant plusieurs perspectives et offrant une opportunité pour l\'offre d\'emploi. </p><br />\r\n                    <p> Le CIAlgues-2018 sera donc une occasion pour croiser les connaissances autour des macros et micro algues et pour aider à structurer la filière algues en faisant un état des lieux le plus complet possible. Il permettra de mettre en valeur les diverses stratégies biotechnologiques pour exploiter les potentialités économiques des algues. Il permettra aussi aux participants de saisir des occasions de collaboration en recherche et d\'évaluer des possibilités de partenariat\r\n                    </p>', 'Fr'),
-(4, 'titre_accueil', '2ème INTERNATIONAL CONGRESS ON ALGAE', 'En'),
+(3, 'presentation', '<p>La reussite du CIAlgues en 2016 a laisse un impact tres remarquable au sein de tous les participants.<br /> La deuxieme edition CIAlgue-2018 sera une continuite de cette activite internationale axant sur l\'interet evolutif de differents domaines impliquant les algues. Ces thallophytes continuent a ouvrir de nombreuses perspectives pour la recherche scientifiques et pour de nombreux secteurs economiques. </p>\r\n                    <br>\r\n                    <p>Leurs importances alimentaires, sanitaires, cosmetiques, industrielles et energetiques fait de ces vegetaux inferieurs un materiel a exploiter par diverses methodes et ouvrant plusieurs perspectives et offrant une opportunite pour l\'offre d\'emploi. </p><br />\r\n                    <p> Le CIAlgues-2018 sera donc une occasion pour croiser les connaissances autour des macros et micro algues et pour aider a structurer la filiere algues en faisant un etat des lieux le plus complet possible. Il permettra de mettre en valeur les diverses strategies biotechnologiques pour exploiter les potentialites economiques des algues. Il permettra aussi aux participants de saisir des occasions de collaboration en recherche et d\'evaluer des possibilites de partenariat\r\n                    </p>', 'Fr'),
+(4, 'titre_accueil', '2<sup>nd</sup> INTERNATIONAL CONGRESS ON ALGAE', 'En'),
 (5, 'dateLimite_accueil', 'From 22 to 24 March 2018, Marrakech, Morocco', 'En'),
 (6, 'presentation', '<p>The success of the CIAlgues in 2016 has left a very remarkable impact among all the participants. <br /> The second edition CIAlgue-2018 will be a continuation of this international activity focusing on the evolving interest of different areas involving algae. These thallophytes continue to open up many perspectives for scientific research and for many economic sectors.</p>\r\n                    <br>\r\n                    <p>Their importance in food, health, cosmetics, industry and energy makes these lower plants a material to be exploited by various methods and opening up several perspectives and offering an opportunity for the job offer. </p><br />\r\n                    <p> The CIAlgues-2018 will be an opportunity to cross knowledge about macros and micro algae and to help structure the algae chain by making a complete inventory of the situation. It will make it possible to highlight the various biotechnological strategies to exploit the economic potentialities of algae. It will also allow participants to seize opportunities for collaborative research and to assess opportunities for partnerships.\r\n                    </p>', 'En');
 
@@ -57,7 +57,7 @@ INSERT INTO `accueil` (`id`, `type`, `text`, `langue`) VALUES
 CREATE TABLE `article` (
   `id` int(11) NOT NULL,
   `ar_title` varchar(255) DEFAULT NULL,
-  `ar_text` text,
+  `ar_text` text CHARACTER SET utf8 COLLATE utf8_bin,
   `author` varchar(25) DEFAULT NULL,
   `ar_path` varchar(255) DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
@@ -81,7 +81,7 @@ INSERT INTO `article` (`id`, `ar_title`, `ar_text`, `author`, `ar_path`) VALUES
 CREATE TABLE `calendar` (
   `id` int(11) NOT NULL,
   `dateCalendar` date DEFAULT NULL,
-  `description` text,
+  `description` text CHARACTER SET utf8 COLLATE utf8_bin,
   `langue` varchar(25) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -90,8 +90,8 @@ CREATE TABLE `calendar` (
 --
 
 INSERT INTO `calendar` (`id`, `dateCalendar`, `description`, `langue`) VALUES
-(1, '2017-11-30', 'Date limite de soumission des formulaires d\'inscription et des rÃ©sumÃ©s pour les prÃ©sentations orales et par affiches   ', 'Fr'),
-(2, '2018-01-15', 'Notification d\'acceptation des prÃ©sentations orales et des prÃ©sentations par affiches', 'Fr'),
+(1, '2017-11-30', 'Date limite de soumission des formulaires d\'inscription et des resumes pour les presentations orales et par affiches   ', 'Fr'),
+(2, '2018-01-15', 'Notification d\'acceptation des presentations orales et des presentations par affiches', 'Fr'),
 (3, '2018-01-31', 'Date limite pour le paiement des frais d\'inscription ', 'Fr'),
 (5, '2017-11-30', 'Deadline for submitting registration forms and abstracts for oral and poster submissions         ', 'En'),
 (6, '2018-01-15', 'Notification of Acceptance of Oral Presentations and Poster Presentations', 'En'),
@@ -157,12 +157,27 @@ INSERT INTO `commite` (`id`, `nom`, `country`, `university`, `type`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `contactme`
+--
+
+CREATE TABLE `contactme` (
+  `id` int(11) NOT NULL,
+  `nom` varchar(25) DEFAULT NULL,
+  `sujet` varchar(255) DEFAULT NULL,
+  `message` text,
+  `emiteur` varchar(255) DEFAULT NULL,
+  `email` varchar(255) DEFAULT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `frais`
 --
 
 CREATE TABLE `frais` (
   `id` int(11) NOT NULL,
-  `type` varchar(255) DEFAULT NULL,
+  `type` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
   `dateLimite` date DEFAULT NULL,
   `state` tinyint(1) DEFAULT NULL,
   `prix` double DEFAULT NULL,
@@ -201,11 +216,17 @@ CREATE TABLE `inscription` (
   `email` varchar(255) DEFAULT NULL,
   `address` varchar(255) DEFAULT NULL,
   `type` int(11) DEFAULT NULL,
-  `theme` varchar(255) DEFAULT NULL,
-  `titre` text,
+  `theme` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
+  `titre` text CHARACTER SET utf8 COLLATE utf8_bin,
   `country` varchar(255) DEFAULT NULL,
   `price` int(11) DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `inscription`
+--
+
+
 
 -- --------------------------------------------------------
 
@@ -215,8 +236,8 @@ CREATE TABLE `inscription` (
 
 CREATE TABLE `programme` (
   `id` int(11) NOT NULL,
-  `titre` varchar(510) DEFAULT NULL,
-  `description` text,
+  `titre` varchar(510) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
+  `description` text CHARACTER SET utf8 COLLATE utf8_bin,
   `langue` varchar(25) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -225,14 +246,14 @@ CREATE TABLE `programme` (
 --
 
 INSERT INTO `programme` (`id`, `titre`, `description`, `langue`) VALUES
-(1, 'Le programme comprend des confÃ©rences plÃ©niÃ¨res (45 min)', '                    ', 'Fr'),
+(1, 'Le programme comprend des conferences pleniÃ¨res (45 min)', '                    ', 'Fr'),
 (2, 'des lectures (30 min)', '', 'Fr'),
 (3, 'des communications orales (15 min)', '', 'Fr'),
-(4, 'des prÃ©sentations par affiches', 'Les langues officielles du symposium sont l\'anglais et le franÃ§ais', 'Fr'),
-(5, 'Le programme comprend des confÃ©rences plÃ©niÃ¨res (45 min)', '', 'En'),
+(4, 'des presentations par affiches', 'Les langues officielles du symposium sont l\'anglais et le franÃ§ais', 'Fr'),
+(5, 'Le programme comprend des conferences pleniÃ¨res (45 min)', '', 'En'),
 (6, 'des lectures (30 min)', '', 'En'),
 (7, 'des communications orales (15 min)', '', 'En'),
-(8, 'des prÃ©sentations par affiches', 'Les langues officielles du symposium sont l\'anglais et le franÃ§ais', 'En');
+(8, 'des presentations par affiches', 'Les langues officielles du symposium sont l\'anglais et le franÃ§ais', 'En');
 
 -- --------------------------------------------------------
 
@@ -252,44 +273,19 @@ CREATE TABLE `theme` (
 --
 
 INSERT INTO `theme` (`id`, `titre`, `description`, `langue`) VALUES
-(7, 'Algues et biodiversitÃ©', '', 'Fr'),
-(8, 'Biotechnologies algales', 'Phytochimie, Substances de dÃ©fenses naturelles, Bio-PolymÃ¨res, ActivitÃ©s,â€¦..', 'Fr'),
-(9, 'Algues et agriculture', 'Bio-Pesticides, Bio-Fertilisants, Hormones,â€¦.', 'Fr'),
-(10, 'Algues et environnement', 'traitement des eaux usÃ©es, bioaccumulants de mÃ©taux lourds, rÃ©duction de lâ€™effet de serre, toxicitÃ© des algues.', 'Fr'),
-(11, 'Algues et industries', 'Pharmaceutiques, Agroalimentaires, ThalassothÃ©rapie, CosmÃ©tiqueâ€¦.', 'Fr'),
+(7, 'Algues et biodiversite', '', 'Fr'),
+(8, 'Biotechnologies algales', 'Phytochimie, Substances de defenses naturelles, Bio-PolymÃ¨res, Activites,...', 'Fr'),
+(9, 'Algues et agriculture', 'Bio-Pesticides, Bio-Fertilisants, Hormones,..', 'Fr'),
+(10, 'Algues et environnement', 'traitement des eaux usees, bioaccumulants de metaux lourds, reduction de lâ€™effet de serre, toxicite des algues.', 'Fr'),
+(11, 'Algues et industries', 'Pharmaceutiques, Agroalimentaires, Thalassotherapie, Cosmetique..', 'Fr'),
 (12, 'Algocarburants', '', 'Fr'),
 (13, 'Algae and biodiversity', '', 'En'),
-(14, 'Algae Biotechnology', 'Phytochemistry, Natural defenses, Bio-Polymers, Activities,â€¦.', 'En'),
-(15, 'Algae and agriculture', 'Bio-Pesticides, Bio-Fertilizers, Hormones,â€¦.', 'En'),
+(14, 'Algae Biotechnology', 'Phytochemistry, Natural defenses, Bio-Polymers, Activities,..', 'En'),
+(15, 'Algae and agriculture', 'Bio-Pesticides, Bio-Fertilizers, Hormones,..', 'En'),
 (16, 'Algae and environment', 'waste water treatment, heavy metal bioaccumulants, reduction of the greenhouse effect, algae toxicity.', 'En'),
-(17, 'Algae and industries', 'Pharmaceuticals, Agroalimentary, Thalassotherapy, Cosmeticsâ€¦.', 'En'),
+(17, 'Algae and industries', 'Pharmaceuticals, Agroalimentary, Thalassotherapy, Cosmetics..', 'En'),
 (18, 'Algocarburants', '', 'En');
 
--- --------------------------------------------------------
---
--- Table structure for table `contactme`
---
-
-CREATE TABLE `contactme` (
-  `id` int(11) NOT NULL,
-  `nom` varchar(25) DEFAULT NULL,
-  `sujet` varchar(255) DEFAULT NULL,
-  `message` text,
-  `emiteur` varchar(255) DEFAULT NULL,
-  `email` varchar(255) DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `contactme`
---
---
--- Indexes for table `contactme`
---
-ALTER TABLE `contactme`
-  ADD PRIMARY KEY (`id`);
-  
-  ALTER TABLE `contactme`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 -- --------------------------------------------------------
 
 --
@@ -339,6 +335,12 @@ ALTER TABLE `calendar`
 -- Indexes for table `commite`
 --
 ALTER TABLE `commite`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `contactme`
+--
+ALTER TABLE `contactme`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -396,6 +398,11 @@ ALTER TABLE `calendar`
 ALTER TABLE `commite`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
 --
+-- AUTO_INCREMENT for table `contactme`
+--
+ALTER TABLE `contactme`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+--
 -- AUTO_INCREMENT for table `frais`
 --
 ALTER TABLE `frais`
@@ -404,7 +411,7 @@ ALTER TABLE `frais`
 -- AUTO_INCREMENT for table `inscription`
 --
 ALTER TABLE `inscription`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 --
 -- AUTO_INCREMENT for table `programme`
 --
